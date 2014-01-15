@@ -1,0 +1,71 @@
+.content {
+background-color: #ffffff;
+box-shadow: -10px 10px 5px #888888;
+margin-right:10%;
+margin-left: 10%;
+margin-top: 10%;
+margin-bottom: 35%;
+position: relate;
+border: 3px solid black;
+
+}
+.whoIam {
+margin-left: 5%;
+margin-right: 5%;
+}
+.whoIam:hover{
+color: hotpink;
+font-size: 26px;
+font-family: fantasy;
+}
+hr {
+
+}
+img {
+position:absolute;
+width: 40%;
+top: 0;
+left: 100;
+z-index: -1;
+}
+h1 {
+padding:30px;
+}
+.1stCloud {
+width: 40%;
+position: absolute;
+top: 0px;
+z-index: -1;
+
+}
+h1, h2 {
+text-align: center;
+}
+
+table {
+margin-left: 30%;
+width: 45%;
+}
+.titles {
+border-bottom: 1px solid black;
+
+
+}
+body {
+background-color: #38B0DE;
+background-image: url('images/sun.png'), url('images/grass.png');
+background-repeat: no-repeat;
+background-position: top right, bottom;
+background-size: 15%, 100%;
+font-family: sans-serif;
+}
+p {
+font-size: 14px;
+}
+.assignments p{
+margin-right: 5%;
+margin-left: 5%;
+padding-bottom: 50px;
+padding-top: 10px;
+font-size: 17px;
+}
