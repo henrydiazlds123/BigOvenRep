@@ -32,7 +32,7 @@ if (!mysqli_query($mysqli,$result))
 {
    die('Error: ' . mysqli_error($mysqli));
 }
-echo "Thank you for signing up. Please give us 24-48 hours to verify your account then you may start requesting to check items out.";
+echo "Thank you for signing up! Please give us 24-48 hours to verify your account then you may start requesting to check items out.";
 
 mysqli_close($mysqli);
 ?>
