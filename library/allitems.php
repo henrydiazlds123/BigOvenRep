@@ -22,7 +22,7 @@
 <div class="bottom">
 <h1>All Items in the Library Catalog</h1>
 <?php
-$mysqli = new mysqli('localhost', 'phpUnicorn', 'movie', 'lib_db');
+$mysqli = new mysqli('server', 'username', 'password', 'database');
 if ($mysqli->connect_errno)
 {
    echo "Failed to connect to database";
