@@ -64,6 +64,9 @@ padding-bottom: 50px;
 padding-top: 10px;
 font-size: 17px;
 }
+.hide {
+visibility: hidden;
+}
 body:hover{
 background-image: url('tardis.png'); /*not my image. I got it from http://fc01.deviantart.net/fs71/i/2012/326/e/c/tardis_wallpaper___dw_by_vampiric_time_lord-d5luyi7.png */
 background-size: 100%;
@@ -85,4 +88,10 @@ width: 100%;
 }
 body:hover h2 {
 font-size: 20px;
+}
+body:hover .hide {
+/*visibility: visible;*/
+z-index: 1;
+position: absolute;
+
 }
