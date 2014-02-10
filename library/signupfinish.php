@@ -20,7 +20,7 @@
 </div>
 <div class="bottom">
 <?php
-$mysqli = new mysqli('localhost', 'phpUnicorn', 'movie', 'lib_db');
+$mysqli = new mysqli('server', 'username', 'password', 'database');
 if ($mysqli->connect_errno)
 {
    echo "Failed to connect to database";
