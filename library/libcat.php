@@ -18,8 +18,19 @@
    </ul>
 </div>
 <div class="bottom">
-<div class="newItems">
-<h1>New Items Added to our Catalog</h1>
+Search the Catalog : <br />
+<div class="search">
+<form method="post">
+<select>
+<option>General Keyword</option>
+<option>Title Keyword</option>
+<option>Title Alphabetical</option>
+<option>Author Keyword</option>
+<option>Author Alphabetical</option>
+<option>Call Number</option>
+</select>
+<input type="text" name="search"/><br />
+</form>
 </div>
 </div>
 </body>
