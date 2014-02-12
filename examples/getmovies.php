@@ -1,1 +1,0 @@
-this came from php...id is: <?php echo$_GET["actorId"] ;?>
