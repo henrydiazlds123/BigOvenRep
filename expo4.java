@@ -5,37 +5,58 @@ import java.net.*;
 import java.io.*;
 import java.applet.*;
 import java.awt.*;
+import javax.swing.*;
 
-public class FunApplet
-   extends java.applet.Applet
+public class expo4
+implements ActionListener
 {
    //got help for textfield from http://www.willamette.edu/~gorr/classes/cs231/lectures/chapter5/
    //got help for the button from http://docs.oracle.com/javase/tutorial/uiswing/components/button.html#abstractbutton
+   //got a lot of help from the book titled "The JFC Swing Tutorial Second Edition: A Guide to Constructing GUIs"
    TextField inputLine = new TextField(40);
    
-   public FunApplet() {
-      add(inputLine);
+   public expo4() {
+     // add(inputLine);
    }
    
-   public void actionPerformed(ActionEvent event)
+   private static void createAndShowGUI()
+   {
+      JFrame.setDefaultLookAndFeelDecorated(true);
+      
+      JFrame frame = new JFrame("");
+      
+      JButton addToStartList = new JButton("Name");
+      addToStartList.addActionListener(new expo4());
+      
+      frame.getContentPane().add(addToStartList);
+      
+      //     String inputLine;
+      
+      
+      
+      //Display window
+      frame.pack();
+      frame.setVisible(true);
+      
+      
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+   }
+   
+   
+   public static void main(String[] args)
+   {
+      new expo4().run();
+   }
+   
+   public void run() {
+      createAndShowGUI();
+   }
+           
+    public void actionPerformed(ActionEvent event)
    {
       String direction = inputLine.getText();
+      JLabel label = new JLabel("SHows");
    }
 
-    public static void main(String[] args) throws Exception {
-
-        URL oracle = new URL("http://www.oracle.com/");
-        BufferedReader in = new BufferedReader(
-        new InputStreamReader(oracle.openStream()));
-        
-        Button addToStartList = new Button("Name");
-
-        
-
-        String inputLine;
-        while ((inputLine = in.readLine()) != null)
-            System.out.println(inputLine);
-        in.close();
-    }
 }
 
