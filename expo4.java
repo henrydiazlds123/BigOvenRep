@@ -16,8 +16,8 @@ implements ActionListener
    TextField inputLine = new TextField(40);
    
    public expo4() {
-      add(inputLine);
-         inputLine.addActionListener(this);
+      add(inputLine)
+      inputLine.addActionListener(this);
 
    }
    
