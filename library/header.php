@@ -1,6 +1,5 @@
 <div class="top">
 <div class="logIn">
-
  <?php  
    if(isset($_SESSION["user"]))
    {
@@ -17,6 +16,8 @@
 </div>
 <div class="search">
 <form action="search.php" method="Get">
+<a href="/library/"><img class="logo" src="../css/logo.png" /></a>
+
 <?php 
 echo "<select name=\"searchType\">
 
@@ -42,34 +43,6 @@ echo "<select name=\"searchType\">
    }
    echo ">Author Keyword</option>";
 
-   echo "<option value=\"titleAlp\" ";
-   if (isset($_GET['searchType']) and $_GET['searchType'] == "titleAlp")
-   {
-      echo "selected";
-   }
-   echo ">Title Alphabetically</option>";
-   
-   echo "<option value=\"authorAlp\" ";
-   if (isset($_GET['searchType']) and $_GET['searchType'] == "authorAlp")
-   {
-      echo "selected";
-   }
-   echo ">Author Alphabetically</option>";
-
-   echo "<option value=\"CallNum\" ";
-   if (isset($_GET['searchType']) and $_GET['searchType'] == "CallNum")
-   {
-      echo "selected";
-   }
-   echo ">Call Number</option>";
-
-   echo "<option value=\"Barcode\" ";   
-   if (isset($_GET['searchType']) and $_GET['searchType'] == "Barcode")
-   {
-      echo "selected";
-   }
-   echo ">Bar Code</option>";
-   
    echo "</select>";
    echo "<input type=\"text\" name=\"query\"/";
    if (isset($_GET['query']))
@@ -127,6 +100,7 @@ while ($row = $result->fetch_assoc())
  </select>
 <input type="submit" value="Search">
 </form>
+
 </div>
 </div>
 

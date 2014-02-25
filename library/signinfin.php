@@ -26,7 +26,7 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Gabi's Library</title>
+   <title></title>
 <link rel="stylesheet" type="text/css" href="../css/libraryMain.css"> 
 </head>
 <body>

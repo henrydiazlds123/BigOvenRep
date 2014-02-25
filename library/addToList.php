@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Gabi's Library</title>
+   <title>Add To My List</title>
 <link rel="stylesheet" type="text/css" href="../css/libraryMain.css"> 
 </head>
 <body>

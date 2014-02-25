@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Gabi's Library</title>
+   <title>Help From</title>
 <link rel="stylesheet" type="text/css" href="../css/libraryMain.css"> 
 </head>
 <body>

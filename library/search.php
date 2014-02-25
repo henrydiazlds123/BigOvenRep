@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Gabi's Library</title>
+   <title>Search</title>
 <link rel="stylesheet" type="text/css" href="../css/libraryMain.css"> 
 <link rel="stylesheet" type="text/css" href="../css/search.css"> 
 </head>
@@ -89,25 +89,6 @@ else if ($_GET['searchType'] == "authorKey")
    {
       $result = $mysqli->query("$firstPart WHERE (a.firstName LIKE '%" . $query . "%' OR a.lastName LIKE '%" . $query . "%') ");
    }
-}
-else if ($_GET['searchType'] == "titleAlp")
-{
-   echo "hi";
-
-}
-else if ($_GET['searchType'] == "authorAlp")
-{
-   echo "hi";
-
-}
-else if ($_GET['searchType'] == "CallNum")
-{
-   echo "Sorry! This search option is currently unavailable";
-
-}
-else if($_GET['searchType'] == "barcode")
-{
-   echo "Sorry! This search option is currently unavailable";
 }
 $count = 1;
 echo "<table>";

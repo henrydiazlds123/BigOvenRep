@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Gabi's Library</title>
+   <title>Sign In</title>
 <link rel="stylesheet" type="text/css" href="../css/libraryMain.css"> 
 </head>
 <body>

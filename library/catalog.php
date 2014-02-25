@@ -42,6 +42,12 @@ FROM books AS b
    INNER JOIN location AS l ON b.location_id = l.location_id
 WHERE b.book_id = " . $id . " LIMIT 1 ");
 $row = $result->fetch_assoc();
+echo "<!DOCTYPE html>
+      <html>
+      <head>
+         <title>$row[title]</title>
+      </head>
+      <body>";
 echo "<div class=\"together\">";
 echo "<div class=\"showBook\"><img src=\"" . $row[image] . " \" class=\"pic\"></div><br />";
 echo "<div class=\"info\">";
@@ -85,5 +91,7 @@ else
    echo "<form action=\"addToList.php\"><input type=\"submit\" value=\"Add To My List\" /></form>";
 }
 echo "</div>";
-echo "</div>";
+echo "</div>
+      </body>
+      </html>";
 ?>

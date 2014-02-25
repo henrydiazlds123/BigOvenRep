@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sign Up</title>
+<title>Change Password</title>
 <link rel="stylesheet" type="text/css" href="../css/libraryMain.css"> 
 
 </head>
