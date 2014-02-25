@@ -1,23 +1,17 @@
+<?php session_start();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sign Up</title>
+   <title>Gabi's Library</title>
 <link rel="stylesheet" type="text/css" href="../css/libraryMain.css"> 
-
+<link rel="stylesheet" type="text/css" href="../css/allitems.css"> 
 </head>
 <body>
-<div class="top">
-<a href="signIn.php">Sign In</a>
-<a href="signUp.php">Sign Up</a>
-</div>
-<div class="nav">
-   <ul>
-      <li class="firstUL">Library Catalog</li>
-      <li>How It Works</li>
-      <li>About Us</li>
-      <li>Contact Us</li>
-   </ul>
-</div>
+
+<?php include 'header.php';?>
+
 
 <div class="bottom">
 <h1>All Items in the Library Catalog</h1>
@@ -30,6 +24,7 @@ if ($mysqli->connect_errno)
 $result = $mysqli->query("SELECT * FROM books");
 while ($row = $result->fetch_assoc())
 {
+  echo "<a href=\"catalog.php?bk=" . $row[book_id] . "\"><img src=\"" . $row[image] . "\"></a>"; 
   echo "" . $row[title] . '<br />' . $row[summary] . '<br />';
   echo '<br />';
 }
