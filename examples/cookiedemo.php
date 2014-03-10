@@ -31,7 +31,7 @@ echo $_COOKIE["user"];
 ?>
 <br>
 <?php
-echo $_COOKIE["visits"];
+/*echo $_COOKIE["visits"];
 
 if ($content = file_get_contents("/assignments/results.txt"))
 {
@@ -40,7 +40,7 @@ print "$content";
 else
 {
 echo "Can't find ";
-}
+}*/
 ?>
 </body>
 </html>
