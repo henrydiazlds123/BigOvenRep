@@ -3,18 +3,50 @@ body {
 	background-color:lightblue;
 }
 
-div.mainDiv {
+div.mainDivL {
 	border:1px black solid;
     box-shadow: 10px 10px 5px #888888;
 	text-align:center;
 	margin:auto;
-	height:600px;
-	width:600px;
+	height:300px;
+	width:300px;
+	float:left;
+	background-color:white;
 }
 
-p.mainP {
+div.mainDivR {
 	border:1px black solid;
     box-shadow: 10px 10px 5px #888888;
 	text-align:center;
 	margin:auto;
+	height:300px;
+	width:300px;
+	float:right;
+	background-color:white;
+}
+
+p.mainPL {
+	border:1px black solid;
+    box-shadow: 10px 10px 5px #888888;
+	text-align:center;
+	margin:auto;
+	height:20px;
+	float:left;
+	background-color:yellow;
+}
+
+p.mainPR {
+	border:1px black solid;
+    box-shadow: 10px 10px 5px #888888;
+	text-align:center;
+	margin:auto;
+	height:20px;
+	float:right;
+	background-color:yellow;
+}
+
+input.mainInput {
+	box-shadow: 10px 10px 5px #888888;
+	float:right;
+	background-color:yellow;
 }

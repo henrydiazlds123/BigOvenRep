@@ -9,11 +9,19 @@
 </head>
 <body>
    <br />
-   <p class = "mainP">
+   <p class = "mainPL">
       Ingredients you have
    </p>
+   <p class = "mainPR">
+      What you have already selected
+   </p>
    <br />
-   <div class = "mainDiv">
+   <br />
+   <div class = "mainDivL">
    </div>
+   <div class = "mainDivR">
+   </div>
+   <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /><br /> <br /> <br /> <br /><br /> 
+   <input class = "mainInput" type = "submit" value = "Make me food!"/>
 </body>
 </html>
