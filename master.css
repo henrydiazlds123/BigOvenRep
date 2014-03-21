@@ -1,0 +1,20 @@
+@CHARSET "ISO-8859-1";
+body {
+	background-color:lightblue;
+}
+
+div.mainDiv {
+	border:1px black solid;
+    box-shadow: 10px 10px 5px #888888;
+	text-align:center;
+	margin:auto;
+	height:600px;
+	width:600px;
+}
+
+p.mainP {
+	border:1px black solid;
+    box-shadow: 10px 10px 5px #888888;
+	text-align:center;
+	margin:auto;
+}
