@@ -7,22 +7,16 @@
    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    <title> BigOven By Ingredient </title>
    <link rel = "stylesheet" href = "master.css" type = "text/css"/>
-   <script>
-   function showIngredients() {
-	   string ingredient = document.getElementById('ingredient').value;
-	   
-	   
-	   
-   }
-   </script>
+   <script src = "master.js" type = "text/javascript"></script>
 </head>
 <body>
 <form method = "POST" action = "">
    <br />
    <p class = "mainPL">
       Ingredients you have
-      <input type = "text" onchange = "showIngredients()" name = "ingredient" id = "ingredient"/>
    </p>
+   <input type = "text" onchange = "showIngredients()" 
+          name = "ingredient" id = "ingredient" class = "ingredient"/>
    <p class = "mainPR">
       What you have already selected
    </p>

@@ -50,3 +50,8 @@ input.mainInput {
 	float:right;
 	background-color:yellow;
 }
+
+input.ingredient {
+	border:1px black solid;
+    box-shadow: 10px 10px 5px #888888;
+}
