@@ -11,18 +11,18 @@ div.mainDivL {
 	height:300px;
 	width:300px;
 	float:left;
-	background-color:white;
+	background-color:lightyellow;
 }
 
 div.mainDivR {
 	border:1px black solid;
-    box-shadow: 10px 10px 5px #888888;
+    box-shadow: -10px 10px 5px #888888;
 	text-align:center;
 	margin:auto;
 	height:300px;
 	width:300px;
 	float:right;
-	background-color:white;
+	background-color:lightyellow;
 }
 
 p.mainPL {
@@ -37,7 +37,7 @@ p.mainPL {
 
 p.mainPR {
 	border:1px black solid;
-    box-shadow: 10px 10px 5px #888888;
+    box-shadow: -10px 10px 5px #888888;
 	text-align:center;
 	margin:auto;
 	height:20px;
@@ -46,7 +46,7 @@ p.mainPR {
 }
 
 input.mainInput {
-	box-shadow: 10px 10px 5px #888888;
+	box-shadow: -10px 10px 5px #888888;
 	float:right;
 	background-color:yellow;
 }
