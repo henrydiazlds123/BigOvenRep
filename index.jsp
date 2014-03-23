@@ -7,32 +7,39 @@
    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    <title> BigOven By Ingredient </title>
    <link rel = "stylesheet" href = "master.css" type = "text/css"/>
-   <script src = "master.js" type = "text/javascript"></script>
 </head>
 <body>
-<form method = "POST" action = "">
+<div style = "float:left">
+<form method = "GET" action = "FillIngredientDiv">
    <br />
    <p class = "mainPL">
       Ingredients you have
    </p>
-   <input type = "text" onchange = "showIngredients()" 
-          name = "ingredient" id = "ingredient" class = "ingredient"/>
+   <br />
+   <input type = "text" name = "ingredient" id = "ingredient" class = "ingredient"/>
+   <br />
+   <div class = "mainDivL" id = "mainDivL">
+      Ingredients <br />
+      <c:forEach var="leftinfo" items="${leftinfo}">
+         ${leftinfo.toString()}
+      </c:forEach>
+   </div>
+   <br />
+   <input class = "mainInputL" type = "submit" value = "Click to list all ingredients" />
+</form>
+</div>
+<div style = "float:right">
+<form method = "POST" action = "">
    <p class = "mainPR">
       What you have already selected
    </p>
    <br /> <br />
-   <div class = "mainDivL">
-      <c:forEach var="left" items="${leftinfo}">
-         ${leftinfo.toString()}
-      </c:forEach>
-   </div>
    <div class = "mainDivR">
-      <c:forEach var="right" items="${rightinfo}">
-         ${rightinfo.toString()}
-      </c:forEach>
    </div>
-   <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /><br /> <br /> <br /> <br /><br /> 
-   <input class = "mainInput" type = "submit" value = "Make me food!"/>
+   <br /> <br />
+   <input class = "mainInputR" type = "submit" value = "Make me food!"/>
+   <br />
 </form>
+</div>
 </body>
 </html>

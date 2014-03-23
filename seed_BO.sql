@@ -1,11 +1,10 @@
 TEE texts/create_BO.txt
-
 Use BORecipies;
 
 -- Insert into owner
 SELECT 'ingredient' AS "Insert Into";
 INSERT INTO ingredient
-( ing_name)
+(ing_name)
 VALUES
 ("Abalone")
 ,("Achee")
