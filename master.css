@@ -11,6 +11,7 @@ div.mainDivL {
 	height:300px;
 	width:300px;
 	background-color:lightyellow;
+	overflow:scroll;
 }
 
 div.mainDivR {

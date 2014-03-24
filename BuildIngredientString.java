@@ -7,14 +7,15 @@ import java.sql.Statement;
 public class BuildIngredientString {
    // JDBC driver name and database URL
    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
-   static final String DB_URL = "http://ec2-54-84-127-205.compute-1.amazonaws.com/:mysql://localhost/BORecipies";
+   static final String DB_URL = "jdbc:mysql://cs313awesomesquared.cr3nazmupmxl.us-east-1.rds.amazonaws.com/BORecipies?user=segfault&password=wurger12";
 
-   //  Database credentials
+   //  Database credentials (don't seem to need)
+   /*
    static final String USER = "guest";
    static final String PASS = "password";
+   */
    
-   String response = null;
-   int id;
+   String response = "";
    
    public void run() {
    Connection conn = null;
@@ -25,7 +26,7 @@ public class BuildIngredientString {
 
       //STEP 3: Open a connection
       System.out.println("Connecting to database...");
-      conn = DriverManager.getConnection(DB_URL,USER,PASS);
+      conn = DriverManager.getConnection(DB_URL);
 
       //STEP 4: Execute a query
       System.out.println("Creating statement...");
@@ -39,7 +40,7 @@ public class BuildIngredientString {
          //Retrieve by column name
          String name = rs.getString("ing_name");
 
-         response += "<a href = 'FillIngredientDiv'>" + name + "</a><br />";
+         response += name + "<br />";
         
          
       }
@@ -49,9 +50,14 @@ public class BuildIngredientString {
       conn.close();
    }catch(SQLException se){
       //Handle errors for JDBC
+	  response += "  FAILED1!";
+	  response += "  SQLException: " + se.getMessage();
+	  response += "  SQLState: " + se.getSQLState();
+	  response += "  VendorError: " + se.getErrorCode();
       se.printStackTrace();
    }catch(Exception e){
       //Handle errors for Class.forName
+	   response += "  FAILED2!";
       e.printStackTrace();
    }finally{
       //finally block used to close resources

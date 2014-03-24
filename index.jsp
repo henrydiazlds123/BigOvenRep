@@ -10,13 +10,14 @@
 </head>
 <body>
 <div style = "float:left">
-<form method = "GET" action = "FillIngredientDiv">
+<form method = "POST" action = "FillIngredientDiv">
    <br />
    <p class = "mainPL">
       Ingredients you have
    </p>
    <br />
    <input type = "text" name = "ingredient" id = "ingredient" class = "ingredient"/>
+   <br />
    <br />
    <div class = "mainDivL" id = "mainDivL">
       Ingredients <br />

@@ -26,12 +26,7 @@ public class FillIngredientDiv extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		BuildIngredientString bis = new BuildIngredientString();
-		bis.run();
 		
-		request.setAttribute("leftinfo", bis.response);
-		
-		request.getRequestDispatcher("index.jsp").forward(request, response);
 		
 	}
 
@@ -40,6 +35,12 @@ public class FillIngredientDiv extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		BuildIngredientString bis = new BuildIngredientString();
+		bis.run();
+		
+		request.setAttribute("leftinfo", bis.response);
+		
+		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
 }
