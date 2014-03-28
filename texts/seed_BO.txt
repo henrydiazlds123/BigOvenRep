@@ -1,0 +1,110 @@
+Database changed
++-------------+
+| Insert Into |
++-------------+
+| ingredient  |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 441 rows affected (0.02 sec)
+Records: 441  Duplicates: 0  Warnings: 0
+
+Empty set (0.00 sec)
+
++--------+
+| Commit |
++--------+
+| Commit |
++--------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Database changed
++-------------+
+| Insert Into |
++-------------+
+| ingredient  |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 441 rows affected (0.02 sec)
+Records: 441  Duplicates: 0  Warnings: 0
+
+Empty set (0.00 sec)
+
++--------+
+| Commit |
++--------+
+| Commit |
++--------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Database changed
++-------------+
+| Insert Into |
++-------------+
+| ingredient  |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 441 rows affected (0.02 sec)
+Records: 441  Duplicates: 0  Warnings: 0
+
+Empty set (0.00 sec)
+
++--------+
+| Commit |
++--------+
+| Commit |
++--------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Database changed
++-------------+
+| Insert Into |
++-------------+
+| ingredient  |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 441 rows affected (0.04 sec)
+Records: 441  Duplicates: 0  Warnings: 0
+
+Empty set (0.00 sec)
+
++--------+
+| Commit |
++--------+
+| Commit |
++--------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Database changed
++-------------+
+| Insert Into |
++-------------+
+| ingredient  |
++-------------+
+1 row in set (0.00 sec)
+
+Query OK, 441 rows affected (0.03 sec)
+Records: 441  Duplicates: 0  Warnings: 0
+
+Empty set (0.00 sec)
+
++--------+
+| Commit |
++--------+
+| Commit |
++--------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
