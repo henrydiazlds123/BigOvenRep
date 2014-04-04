@@ -47,7 +47,6 @@ public class BOIngredients extends HttpServlet {
 	   
 	   String result = tg.getHTML(urlToRead);
 	   System.out.print(result + "\n");
-	   XMLParse xml = new XMLParse();
 	   //Vector<Recipe> victor = new Vector(); 
 	   List<Recipe> victor = new ArrayList<Recipe>(); 
 	   try
@@ -56,7 +55,7 @@ public class BOIngredients extends HttpServlet {
       // Get the document's root XML node
          Node root = doc.getDocumentElement();
          NodeList nodes = root.getChildNodes();
-         String count = xml.getNodeValue("ResultCount", nodes);
+         String count = getNodeValue("ResultCount", nodes);
          
          System.out.print(count + "\n");
          NodeList recipies = doc.getElementsByTagName("RecipeInfo");
@@ -106,7 +105,7 @@ public class BOIngredients extends HttpServlet {
       }
 	   System.out.println(victor.size());
 	   request.setAttribute("recipe", victor);
-	   request.getRequestDispatcher("results.jsp").forward(request, response); 
+	   request.getRequestDispatcher("testSearch.jsp").forward(request, response); 
 	}
 
 	/**
@@ -123,4 +122,18 @@ public class BOIngredients extends HttpServlet {
 	    InputSource is = new InputSource(new StringReader(xml));
 	    return builder.parse(is);
 	}
+	 protected String getNodeValue(String tagName, NodeList nodes ) {
+	       for ( int x = 0; x < nodes.getLength(); x++ ) {
+	           Node node = nodes.item(x);
+	           if (node.getNodeName().equalsIgnoreCase(tagName)) {
+	               NodeList childNodes = node.getChildNodes();
+	               for (int y = 0; y < childNodes.getLength(); y++ ) {
+	                   Node data = childNodes.item(y);
+	                   if ( data.getNodeType() == Node.TEXT_NODE )
+	                       return data.getNodeValue();
+	               }
+	           }
+	       }
+	       return "";
+	   }
 }
