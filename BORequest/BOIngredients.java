@@ -2,6 +2,9 @@ package bO;
 
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -40,11 +43,13 @@ public class BOIngredients extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 	   testGet tg = new testGet();
-	   String urlToRead = "http://api.bigoven.com/recipes?any_kw=tortilla&pg=1&rpp=20&api_key=dvx92WhnkjK71I76s2Xd3ARa37DkdVQU&title_kw=bacon";
+	   String urlToRead = "http://api.bigoven.com/recipes?any_kw=\"cheese\"%20\"sugar\"&pg=1&rpp=100&api_key=dvx92WhnkjK71I76s2Xd3ARa37DkdVQU&title_kw=bacon";
 	   
 	   String result = tg.getHTML(urlToRead);
 	   System.out.print(result + "\n");
 	   XMLParse xml = new XMLParse();
+	   //Vector<Recipe> victor = new Vector(); 
+	   List<Recipe> victor = new ArrayList<Recipe>(); 
 	   try
       {
          Document doc = loadXMLFromString(result);
@@ -60,29 +65,33 @@ public class BOIngredients extends HttpServlet {
          {
             Node recipeInfo = recipies.item(temp);
             NodeList recipeInfoChildren = recipeInfo.getChildNodes();
-            
+            Recipe pokemon = new Recipe();
             for (int i = 0; i < recipeInfoChildren.getLength(); i++) 
             {
+               
                Node child = recipeInfoChildren.item(i);
                if (child.getNodeName().equals("Title")) 
                {
-                  System.out.println(child.getTextContent());
+                  pokemon.setRecipe_name(child.getTextContent());
                }
                if (child.getNodeName().equals("RecipeID")) 
                {
-                  System.out.println(child.getTextContent());
+                  pokemon.setRecipe_BOID(child.getTextContent());
                }
              //This gets the URLs
                if (child.getNodeName().equals("WebURL")) 
                {
+                  pokemon.setRecipe_url(child.getTextContent());
                   System.out.println(child.getTextContent());
                }
                if (child.getNodeName().equals("ImageURL")) 
                {
-                  System.out.println(child.getTextContent());
+                  System.out.print(child.getTextContent());
+                  pokemon.setRecipe_img(child.getTextContent());
                }
+               
             }
-            
+            victor.add(pokemon);
          }
          
          
@@ -95,9 +104,9 @@ public class BOIngredients extends HttpServlet {
          // TODO Auto-generated catch block
          e.printStackTrace();
       }
-	   
-	   request.setAttribute("recipe", result);
-	   request.getRequestDispatcher("testSearch.jsp").forward(request, response); 
+	   System.out.println(victor.size());
+	   request.setAttribute("recipe", victor);
+	   request.getRequestDispatcher("results.jsp").forward(request, response); 
 	}
 
 	/**
