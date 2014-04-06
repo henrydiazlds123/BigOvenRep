@@ -1,0 +1,22 @@
+body {
+	background-color: #A60000;
+   margin-left: 0;
+   margin-right: 0;   
+   color: white;
+}
+.mainGraphic 
+{
+   float:right;
+   height: 200px;
+   margin-right: 5%;
+   display: block;
+}
+h1 {
+   text-align: center;
+   margin-top: 10%;
+   display: block;
+   font-family: cursive;
+}
+.content {
+   margin: 5%;
+}
