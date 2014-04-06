@@ -1,6 +1,8 @@
 
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,12 +37,25 @@ public class FillIngredientDiv extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		BuildIngredientString bis = new BuildIngredientString();
-		bis.run();
 		
-		request.setAttribute("leftinfo", bis.response);
+		String example = "";
+		if (request.getParameter("list") != null)
+		{
+			example = request.getParameter("list");
+		}
+		else
+		{
+			example = "fail";
+		}
 		
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+		String[] list = example.split(":");
+		int size = list.length;
+		
+		PrintWriter out = response.getWriter();
+		for(int i = 0; i < size; i++)
+		{
+		   out.print(list[i] + "<br />");
+		}
 	}
 
 }
