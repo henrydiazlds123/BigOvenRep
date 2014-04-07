@@ -41,13 +41,12 @@ public class BOIngredients extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-	   //String[] array = request.getAttribute("ingredient");
+	   String[] array = (String[]) request.getAttribute("ingredients");
 	   String ingred = "";
-	   //for (int i = 0; i < array.length(); i++)
+	   for (int i = 0; i < array.length(); i++)
 	   {
-	      //for (int j = 0; j < array[i].length(); j++)
-	        // array[j].replaceAll(" ", "%20");
-	      //ingred= ingred + "%20\"" + array[j] + "\"";
+	      array[i].replaceAll(" ", "%20");
+	      ingred = ingred + "%20\"" + array[i] + "\"";
 	   }
 	   testGet tg = new testGet();
 	   
