@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,8 +41,18 @@ public class BOIngredients extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
+	   //String[] array = request.getAttribute("ingredient");
+	   String ingred = "";
+	   //for (int i = 0; i < array.length(); i++)
+	   {
+	      //for (int j = 0; j < array[i].length(); j++)
+	        // array[j].replaceAll(" ", "%20");
+	      //ingred= ingred + "%20\"" + array[j] + "\"";
+	   }
 	   testGet tg = new testGet();
-	   String urlToRead = "http://api.bigoven.com/recipes?any_kw=\"cheese\"%20\"sugar\"&pg=1&rpp=100&api_key=dvx92WhnkjK71I76s2Xd3ARa37DkdVQU&title_kw=bacon";
+	   
+	   //String urlToRead = "http://api.bigoven.com/recipes?any_kw="+ingred+"&pg=1&rpp=100&api_key=dvx92WhnkjK71I76s2Xd3ARa37DkdVQU";
+	   String urlToRead = "http://api.bigoven.com/recipes?any_kw=\"cheese\"%20\"bacon\"&pg=1&rpp=100&api_key=dvx92WhnkjK71I76s2Xd3ARa37DkdVQU";
 	   
 	   String result = tg.getHTML(urlToRead);
 	   System.out.print(result + "\n");
@@ -122,18 +131,32 @@ public class BOIngredients extends HttpServlet {
 	    InputSource is = new InputSource(new StringReader(xml));
 	    return builder.parse(is);
 	}
-	 protected String getNodeValue(String tagName, NodeList nodes ) {
-	       for ( int x = 0; x < nodes.getLength(); x++ ) {
-	           Node node = nodes.item(x);
-	           if (node.getNodeName().equalsIgnoreCase(tagName)) {
-	               NodeList childNodes = node.getChildNodes();
-	               for (int y = 0; y < childNodes.getLength(); y++ ) {
-	                   Node data = childNodes.item(y);
-	                   if ( data.getNodeType() == Node.TEXT_NODE )
-	                       return data.getNodeValue();
-	               }
-	           }
-	       }
-	       return "";
+	protected String getNodeValue(String tagName, NodeList nodes ) 
+	{
+	   for ( int x = 0; x < nodes.getLength(); x++ ) 
+	   {
+	      Node node = nodes.item(x);
+	      if (node.getNodeName().equalsIgnoreCase(tagName)) 
+	      {
+	         NodeList childNodes = node.getChildNodes();
+	         for (int y = 0; y < childNodes.getLength(); y++ ) 
+	         {
+	            Node data = childNodes.item(y);
+	            if ( data.getNodeType() == Node.TEXT_NODE )
+	               return data.getNodeValue();
+	         }
+	      }
 	   }
+	   return "";
+	}
+	
+	public String parseArray(List<String> list)
+	{
+	   String ingredients = "";
+	   for (int i = 0; i < list.size(); i++)
+	      ingredients = ingredients +"\"" +list.get(i) + "\"";
+	      //ingredients = ingredients + list.get(i) ;
+	   return ingredients;
+	}
+	
 }
