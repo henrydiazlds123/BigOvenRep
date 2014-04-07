@@ -1,4 +1,6 @@
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -32,122 +34,9 @@
                 <div id="demo-right">
                     <div id="hWrapper">
                         <div id="carouselh">
-                            <div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <a href="#"><span class="thumbnail-text">the beginnning</span></a></div>
-                            <div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="http://ecx.images-amazon.com/images/I/51WSoIfvnxL._AA160_.jpg" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-
-                            <div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-                            <div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-                            <div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-                            <div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-<div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">Image Text</span></a></div>
-                            <div>
-                                <a href="#"><img alt="" src="title2.png" /></a>
-                                <span class="thumbnail-text">The End</span></a></div>
-   
+                     	<c:foreach items="${recipe}" var="recipe">
+	                     ${recipe}
+	                     </c:foreach>
                         </div>
                     </div>
                 </div>
