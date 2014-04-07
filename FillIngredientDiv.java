@@ -49,13 +49,10 @@ public class FillIngredientDiv extends HttpServlet {
 		}
 		
 		String[] list = example.split(":");
-		int size = list.length;
 		
-		PrintWriter out = response.getWriter();
-		for(int i = 0; i < size; i++)
-		{
-		   out.print(list[i] + "<br />");
-		}
+		request.setAttribute("ingredients", list);
+		
+		request.getRequestDispatcher("BOIngredients").forward(request, response);
 	}
 
 }
